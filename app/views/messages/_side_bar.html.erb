@@ -1,7 +1,7 @@
 <div class="side_bar_hero">
 
   <div class="side_bar_header">
-    <div class="side_bar_nickname"><a href="">Tom</a></div>
+    <div class="side_bar_nickname"><%= link_to current_user.name, edit_user_path(current_user) %></div>
     <div class="side_bar_make"><a href="">チャットを作成する</a></div>
   </div>
 
