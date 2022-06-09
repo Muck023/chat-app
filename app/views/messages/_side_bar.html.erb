@@ -2,13 +2,13 @@
 
   <div class="side_bar_header">
     <div class="side_bar_nickname"><%= link_to current_user.name, edit_user_path(current_user) %></div>
-    <div class="side_bar_make"><%= link_to "チャットを作成する", new_room_path %></div>
+    <div class="side_bar_make"><%= link_to 'チャットを作成する', new_room_path %></div>
   </div>
 
   <div class="side_bar_style">
     <% current_user.rooms.each do |room| %>
       <div class="side_bar_room_style">
-        <div class="side_bar_room_name"><a href="#"><%= room.name %></a></div>
+        <div class="side_bar_room_name"><%= link_to room.name, room_messages_path(room) %></a></div>
       </div>
     <% end %>
   </div>
